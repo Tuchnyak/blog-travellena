@@ -4,12 +4,12 @@
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags"%>
 
 <body>
-
-	<t:header />
-
-	<jsp:doBody />
-
-	<t:footer />
+	
+			<t:header />
+		
+			<jsp:doBody />
+		
+			<t:footer />
 	
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
