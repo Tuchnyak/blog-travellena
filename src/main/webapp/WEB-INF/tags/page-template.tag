@@ -4,13 +4,22 @@
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags"%>
 
 <body>
-	
-			<t:header />
-		
-			<jsp:doBody />
-		
-			<t:footer />
-	
+
+	<t:header />
+
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-6">
+			
+				<jsp:doBody />
+				
+			</div>
+		</div>
+	</div>
+
+	<t:footer />
+
+
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

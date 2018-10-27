@@ -13,7 +13,7 @@
 
 	<!-- Main Logo with search -->
 	<div class="container-fluid bg-dark text-black-50 text-center"
-		style="background-image: url('${pageContext.request.contextPath}/resources/img/header-img.jpeg'); height: 666px; background-size: cover; background-attachment: scroll; position: relative; background-position: center center;">
+		style="background-image: url('${pageContext.request.contextPath}/resources/img/header-img.jpeg'); height: 530px; background-size: cover; background-attachment: scroll; position: relative; background-position: center center;">
 		<div class="row">
 			<div class="card-img-overlay d-flex flex-column justify-content-center text-black-50">
 				<h1 class="card-title display-2 font-weight-bold">Hello, Asia!</h1>
