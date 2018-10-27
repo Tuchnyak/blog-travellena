@@ -26,29 +26,31 @@
 <t:page-template>
 
 	<jsp:body>
-	
-		<h2>Новые статьи</h2>
-		<hr>
-		<hr>
-	
-	<table>
+		
+		<div class="container-fluid">
+			
+			<h1 class="display-4 my-3">Последние:</h1>
+			<hr class="my-4">
+			
 			<c:forEach var="tempArticle" items="${articles}">
+			
+				<div class="row justify-content-center no-gutters my-2">
 				
-				<tr>
-					<td>
-						<div align="center">
-							<img alt="${tempArticle.title} article image" src="${tempArticle.coverLink}" width=95% align="middle">
-						</div>
-					</td>
+					<div class="col col-lg-4 px-1">
 					
-					<td>
+						<img class="img-fluid" alt="${tempArticle.title}: article image" src="${tempArticle.coverLink}">
+					
+					</div>
+					
+					<div class="col col-lg-8 px-1">
+					
 						<!-- create link variable to open Article -->
 						<c:url var="openArticle" value="/article/showArticle">
 							<c:param name="articleId" value="${tempArticle.id}"></c:param>
 						</c:url>
-			
+						
 						<h3>
-							<a href="${openArticle}">${tempArticle.title}</a>
+							<a class="text-dark" href="${openArticle}">${tempArticle.title}</a>
 						</h3>
 						
 						<!--  Security content -->
@@ -64,24 +66,30 @@
 								<c:param name="articleId" value="${tempArticle.id}" />
 							</c:url>
 							
-							<a href="${updateLink}">[Update]</a> 
-							<a href="${deleteLink}" onclick="if (!(confirm('Are you sure you want to delete this article?'))) return false">
-								[Delete]
+							<a class="btn btn-sm btn-outline-info" href="${updateLink}">UPDATE</a> 
+							<a class="btn btn-sm btn-outline-danger" href="${deleteLink}"
+								onclick="if (!(confirm('Вы точно хотите удалить данную статью? \nЕё нельзя будет восстановить!'))) return false">
+								DELETE
 							</a>
 							
 						</security:authorize>
-										
-						опубликовано: <t:time timeTag="${tempArticle.publishDate}" />
+						
+						<span class="text-muted font-italic">опубликовано: <t:time timeTag="${tempArticle.publishDate}" /></span>
+						
 						<div class="trim">
 							${tempArticle.body}
 						</div>
-						<a href="${openArticle}">[читать полностью]</a>
-						<hr>
-					</td>
-				</tr>
-		
+						
+						<a class="badge badge-pill badge-success text-uppercase" href="${openArticle}">читать полностью</a>
+					
+					</div>
+				
+				</div>
+				<hr>
+			
 			</c:forEach>
-		</table>
+		
+		</div>
 	
 	</jsp:body>
 

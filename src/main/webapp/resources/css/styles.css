@@ -1,6 +1,6 @@
 .trim {
 	width: 100%;
-	height: 5em;
+	height: 7em;
 	overflow: hidden; /* cut content */
 	padding: 5px; /* fields */
 	text-overflow: ellipsis; /* three dots */
