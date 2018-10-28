@@ -36,13 +36,13 @@
 			
 				<div class="row justify-content-center no-gutters my-2">
 				
-					<div class="col col-lg-4 px-1">
+					<div class="col col-md-5 col-lg-4 px-1">
 					
-						<img class="img-fluid" alt="${tempArticle.title}: article image" src="${tempArticle.coverLink}">
+						<img class="img-fluid rounded" alt="${tempArticle.title}: article image" src="${tempArticle.coverLink}">
 					
 					</div>
 					
-					<div class="col col-lg-8 px-1">
+					<div class="col col-md-7 col-lg-8 px-1">
 					
 						<!-- create link variable to open Article -->
 						<c:url var="openArticle" value="/article/showArticle">
@@ -76,7 +76,7 @@
 						
 						<span class="text-muted font-italic">опубликовано: <t:time timeTag="${tempArticle.publishDate}" /></span>
 						
-						<div class="trim">
+						<div class="trim my-2">
 							${tempArticle.body}
 						</div>
 						

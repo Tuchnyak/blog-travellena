@@ -23,8 +23,8 @@
 		<div class="card-img-overlay h-80 d-flex flex-column justify-content-end">
 			<!-- Add a search box -->
 			<form:form action="searchArticle" method="GET">
-				<input class="form-control-sm" type="text" name="searchString" />
-				<input class="btn btn-success btn-sm" type="submit" value="Поиск по слову">
+				<input class="form-control-sm my-1" type="text" name="searchString" />
+				<input class="btn btn-success btn-sm my-1" type="submit" value="Поиск по слову">
 			</form:form>
 		</div>
 	</div>
