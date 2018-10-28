@@ -27,3 +27,17 @@
 	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.0), #FFFFFF
 		100%);
 }
+
+.logo-header {
+	background-image:
+		url('../img/header-img.jpeg');
+	height: 530px;
+	background-size: cover;
+	background-attachment: scroll;
+	position: relative;
+	background-position: center center;
+}
+
+.hide-in-article {
+
+}

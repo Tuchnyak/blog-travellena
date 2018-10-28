@@ -10,7 +10,28 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
+
 <title>Travellena - Информация</title>
+
+<style type="text/css">
+.logo-header {
+	background-image: url('${infoArticle.coverLink}');
+	height: 530px;
+	background-size: cover;
+	background-attachment: scroll;
+	position: relative;
+	background-position: center center;
+}
+
+.hide-in-article {
+	color: rgba(0, 0, 0, 0.0);
+}
+
+</style>
+
 </head>
 
 <t:page-template>

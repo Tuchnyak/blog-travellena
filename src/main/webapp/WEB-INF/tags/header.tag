@@ -12,12 +12,11 @@
 	<t:menu />
 
 	<!-- Main Logo with search -->
-	<div class="container-fluid bg-dark text-black-50 text-center"
-		style="background-image: url('${pageContext.request.contextPath}/resources/img/header-img.jpeg'); height: 530px; background-size: cover; background-attachment: scroll; position: relative; background-position: center center;">
+	<div class="container-fluid bg-dark text-black-50 text-center logo-header">
 		<div class="row">
 			<div class="card-img-overlay d-flex flex-column justify-content-center text-black-50">
-				<h1 class="card-title display-2 font-weight-bold">Hello, Asia!</h1>
-				<p class="card-text font-weight-bold h3">downshifting</p>
+				<h1 class="hide-in-article card-title display-2 font-weight-bold">Hello, Asia!</h1>
+				<p class="hide-in-article card-text font-weight-bold h3">downshifting</p>
 			</div>
 		</div>
 		<div class="card-img-overlay h-80 d-flex flex-column justify-content-end">
