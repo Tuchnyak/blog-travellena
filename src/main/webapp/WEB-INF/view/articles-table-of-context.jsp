@@ -25,44 +25,59 @@
 
 	<jsp:body>
 	
-		<h2>Содержание</h2>
-		<hr>
-		<hr>
-	
-		<c:forEach var="tempArticle" items="${articles}">
-	
-			<!-- create link variable to open Article -->
-			<c:url var="openArticle" value="/article/showArticle">
-				<c:param name="articleId" value="${tempArticle.id}"></c:param>
-			</c:url>
-	
-			<a href="${openArticle}">${tempArticle.title}</a>
-			<br>
-			опубликовано: <t:time timeTag="${tempArticle.publishDate}" />
+		<div class="container-fluid">
 			
-			<!--  Security content -->
-			<security:authorize access="hasRole('ADMIN')">
+			<h1 class="display-4 my-3">Содержание:</h1>
+			<hr class="my-4">
+			
+			<c:forEach var="tempArticle" items="${articles}">
+			
+				<div class="row justify-content-center no-gutters my-2">
+					
+					<div class="col px-1 text-center">
+					
+						<!-- create link variable to open Article -->
+						<c:url var="openArticle" value="/article/showArticle">
+							<c:param name="articleId" value="${tempArticle.id}"></c:param>
+						</c:url>
+						
+						<h3>
+							<a class="text-dark" href="${openArticle}">${tempArticle.title}</a>
+						</h3>
+						
+						<!--  Security content -->
+						<security:authorize access="hasRole('ADMIN')">
+						
+							<!-- create update link variable -->
+							<c:url var="updateLink" value="/article/showFormForUpdate">
+								<c:param name="articleId" value="${tempArticle.id}" />
+							</c:url>
+					
+							<!-- create delete link variable -->
+							<c:url var="deleteLink" value="/article/delete">
+								<c:param name="articleId" value="${tempArticle.id}" />
+							</c:url>
+							
+							<a class="btn btn-sm btn-outline-info" href="${updateLink}">UPDATE</a> 
+							<a class="btn btn-sm btn-outline-danger" href="${deleteLink}"
+								onclick="if (!(confirm('Вы точно хотите удалить данную статью? \nЕё нельзя будет восстановить!'))) return false">
+								DELETE
+							</a>
+							
+						</security:authorize>
+						
+						<span class="text-muted font-italic">опубликовано: <t:time timeTag="${tempArticle.publishDate}" /></span>
+						<br>
+						<a class="badge badge-pill badge-success text-uppercase" style="font-size: small" href="${openArticle}">читать полностью</a>
+					
+					</div>
 				
-				<!-- create update link variable -->
-				<c:url var="updateLink" value="/article/showFormForUpdate">
-					<c:param name="articleId" value="${tempArticle.id}" />
-				</c:url>
+				</div>
+				<hr>
+			
+			</c:forEach>
 		
-				<!-- create delete link variable -->
-				<c:url var="deleteLink" value="/article/delete">
-					<c:param name="articleId" value="${tempArticle.id}" />
-				</c:url>
-				
-				<a href="${updateLink}">[Update]</a> 
-				<a href="${deleteLink}" onclick="if (!(confirm('Are you sure you want to delete this article?'))) return false">
-					[Delete]
-				</a>
-				
-			</security:authorize>
-			
-			<hr>
-	
-		</c:forEach>
+		</div>
 	
 	</jsp:body>
 

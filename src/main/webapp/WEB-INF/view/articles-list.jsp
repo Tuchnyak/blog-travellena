@@ -80,7 +80,7 @@
 							${tempArticle.body}
 						</div>
 						
-						<a class="badge badge-pill badge-success text-uppercase" href="${openArticle}">читать полностью</a>
+						<a class="badge badge-pill badge-success text-uppercase" style="font-size: small" href="${openArticle}">читать полностью</a>
 					
 					</div>
 				
