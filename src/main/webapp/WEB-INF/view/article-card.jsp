@@ -14,6 +14,8 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet">
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
 
@@ -48,7 +50,7 @@
 					<article>
 					
 						<div class="text-center my-2">
-							<h1 class="display-3">${article.title}</h1>
+							<h1 class="display-3 word-break">${article.title}</h1>
 							
 							<!--  Security content -->
 							<security:authorize access="hasRole('ADMIN')">
