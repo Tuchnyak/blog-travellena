@@ -37,22 +37,40 @@
 <t:page-template>
 
 	<jsp:body>
-
-		<h2>${infoArticle.title}</h2>
 		
-		<!--  Security content -->
-		<security:authorize access="hasRole('ADMIN')">
-			<!-- create update link variable -->
-			<c:url var="updateLink" value="/article/showFormForUpdate">
-				<c:param name="articleId" value="${infoArticle.id}" />
-			</c:url>
-				<a href="${updateLink}">[Update]</a>
-			<br>
-		</security:authorize>
-		<img alt="${infoArticle.title} article image" src="${infoArticle.coverLink}" width=50% align="middle">
-		<hr>
-	
-		${infoArticle.body}
+		<div class="container-fluid">
+		
+			<div class="row justify-content-center no-gutters my-2">
+			
+				<div class="col">
+				
+					<article>
+					
+						<div class="text-center my-2">
+							<h1 class="display-3">${infoArticle.title}</h1>
+							
+							<!--  Security content -->
+							<security:authorize access="hasRole('ADMIN')">
+							
+								<!-- create update link variable -->
+								<c:url var="updateLink" value="/article/showFormForUpdate">
+									<c:param name="articleId" value="${infoArticle.id}" />
+								</c:url>
+								
+								<a class="btn btn-sm btn-outline-info" href="${updateLink}">UPDATE</a>
+								
+							</security:authorize>													
+						</div>						
+						
+						<p class="text-justify my-4">${infoArticle.body}</p>
+					
+					</article>									
+				
+				</div>
+			
+			</div>
+		
+		</div>
 	
 	</jsp:body>
 

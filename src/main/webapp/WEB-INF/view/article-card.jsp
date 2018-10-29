@@ -63,15 +63,15 @@
 									<c:param name="articleId" value="${article.id}" />
 								</c:url>
 								
-								<a class="btn btn-sm btn-outline-info" href="${updateLink}">[Update]</a>
+								<a class="btn btn-sm btn-outline-info" href="${updateLink}">UPDATE</a>
 								<a class="btn btn-sm btn-outline-danger" href="${deleteLink}"
-									onclick="if (!(confirm('Are you sure you want to delete this article?'))) return false">[Delete]</a>
+									onclick="if (!(confirm('Are you sure you want to delete this article?'))) return false">DELETE</a>
 							</security:authorize>
 							
 							<span class="text-muted font-italic">опубликовано: <t:time timeTag="${article.publishDate}" /></span>														
 						</div>						
 						
-						<p class="text-justify img-fluid my-4">${article.body}</p>
+						<p class="text-justify my-4">${article.body}</p>
 					
 					</article>									
 				
