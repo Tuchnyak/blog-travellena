@@ -32,39 +32,54 @@
 .hide-in-article {
 	color: rgba(0, 0, 0, 0.0);
 }
-
 </style>
 
 </head>
 
 <t:page-template>
 	<jsp:body>
-
-		<h2>${article.title}</h2>
-		<t:time timeTag="${article.publishDate}" />
-		
-		<!--  Security content -->
-		<security:authorize access="hasRole('ADMIN')">
-		
-			<!-- create update link variable -->
-			<c:url var="updateLink" value="/article/showFormForUpdate">
-				<c:param name="articleId" value="${article.id}" />
-			</c:url>
 	
-			<!-- create delete link variable -->
-			<c:url var="deleteLink" value="/article/delete">
-				<c:param name="articleId" value="${article.id}" />
-			</c:url>
+		<div class="container-fluid">
+		
+			<div class="row justify-content-center no-gutters my-2">
 			
-			<a href="${updateLink}">[Update]</a>
-			<a href="${deleteLink}" onclick="if (!(confirm('Are you sure you want to delete this article?'))) return false">[Delete]</a>
-		</security:authorize>
+				<div class="col">
+				
+					<article>
+					
+						<div class="text-center my-2">
+							<h1 class="display-3">${article.title}</h1>
+							
+							<!--  Security content -->
+							<security:authorize access="hasRole('ADMIN')">
+							
+								<!-- create update link variable -->
+								<c:url var="updateLink" value="/article/showFormForUpdate">
+									<c:param name="articleId" value="${article.id}" />
+								</c:url>
+						
+								<!-- create delete link variable -->
+								<c:url var="deleteLink" value="/article/delete">
+									<c:param name="articleId" value="${article.id}" />
+								</c:url>
+								
+								<a class="btn btn-sm btn-outline-info" href="${updateLink}">[Update]</a>
+								<a class="btn btn-sm btn-outline-danger" href="${deleteLink}"
+									onclick="if (!(confirm('Are you sure you want to delete this article?'))) return false">[Delete]</a>
+							</security:authorize>
+							
+							<span class="text-muted font-italic">опубликовано: <t:time timeTag="${article.publishDate}" /></span>														
+						</div>						
+						
+						<p class="text-justify img-fluid my-4">${article.body}</p>
+					
+					</article>									
+				
+				</div>
+			
+			</div>
 		
-		<br>
-		<img src="${article.coverLink}" alt="${article.title} article cover image">
-		<hr>
-		
-		<p>${article.body}</p>
+		</div>	
 			
 	</jsp:body>
 </t:page-template>
