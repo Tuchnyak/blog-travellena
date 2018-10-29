@@ -24,7 +24,7 @@
 <style type="text/css">
 .logo-header {
 	background-image: url('${article.coverLink}');
-	height: 700px;
+	height: 750px;
 	background-size: cover;
 	background-attachment: scroll;
 	position: relative;

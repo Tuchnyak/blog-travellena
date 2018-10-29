@@ -52,3 +52,7 @@
 	-ms-hyphens: auto;
 	hyphens: auto;
 }
+
+.error {
+	color: red
+}

@@ -88,6 +88,12 @@
 				<hr>
 			
 			</c:forEach>
+			
+			<div class="row justify-content-center no-gutters my-2">
+				<div class="col">
+					<a class="btn btn-outline-success btn-lg btn-block text-uppercase" href="${pageContext.request.contextPath}/article/showList">открыть все статьи...</a>
+				</div>
+			</div>
 		
 		</div>
 	
