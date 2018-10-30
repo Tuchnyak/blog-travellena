@@ -34,7 +34,7 @@
 				toolbar : [ 'fullscreen preview help | undo redo cut copy searchreplace code | styleselect bold italic visualblocks visualchars forecolor backcolor alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | image media link table insertdatetime | nonbreaking charmap codesample hr' ],
 				menubar : "edit view format",
 				
-				image_caption : true,
+				image_caption : false,
 				image_dimensions : false,
 				image_class_list : [ {
 					title : 'fluid',
