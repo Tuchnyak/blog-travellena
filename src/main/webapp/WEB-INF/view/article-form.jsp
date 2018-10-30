@@ -32,6 +32,7 @@
 
 				plugins : [ 'wordcount visualchars visualblocks textpattern searchreplace preview nonbreaking insertdatetime hr help code image imagetools advlist lists media link autolink textcolor colorpicker table paste autoresize charmap codesample fullscreen' ],
 				toolbar : [ 'fullscreen preview help | undo redo cut copy searchreplace code | styleselect bold italic visualblocks visualchars forecolor backcolor alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | image media link table insertdatetime | nonbreaking charmap codesample hr' ],
+				menubar : "edit view format",
 				
 				image_caption : true,
 				image_dimensions : false,
@@ -100,11 +101,22 @@
 				  ],
 
 				skin : "lightgray",
-				height : 680
+				height : 700,
+				max_height : 700
 			});
 </script>
 
 <title>Travellena - Article Form</title>
+
+<style type="text/css">
+.fixed-top{
+	position: static;
+	top: 0;
+  	right: 0;
+  	left: 0;
+  	z-index: 1030;
+}
+</style>
 
 </head>
 
@@ -115,8 +127,6 @@
 	</header>
 
 	<div class=container-fluid>
-
-		<div class="row my-5"></div>
 
 		<div class="form-row justify-content-center my-4">
 
@@ -145,13 +155,21 @@
 					<form:textarea path="body" id="TextEditor" />
 					<br>
 			
-					Ready to be published?: <form:checkbox path="readyToPublish" />
-					<br>
+					<div class="form-check my-1">
+						<form:checkbox class="form-check-input" path="readyToPublish" />
+						<label class="form-check-label">
+							Ready to be published?
+						</label>
+					</div>
 					
-					"About" article: <form:checkbox path="info" />
-					<br>
+					<div class="form-check my-1">
+						<form:checkbox class="form-check-input" path="info" />
+						<label class="form-check-label">
+							"About" article
+						</label>
+					</div>					
 
-					<input class="btn btn-lg btn-outline-success btn-block" type="submit" value="Save Article">
+					<input class="btn btn-lg btn-outline-success btn-block my-3" type="submit" value="Save Article">
 
 				</form:form>
 
