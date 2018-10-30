@@ -12,7 +12,7 @@
 	<t:menu />
 
 	<!-- Main Logo with search -->
-	<div class="container-fluid bg-dark text-black-50 text-center logo-header">
+	<div class="container-fluid bg-dark text-center logo-header">
 		<div class="row">
 			<div class="card-img-overlay d-flex flex-column justify-content-center text-black-50">
 				<h1 class="hide-in-article card-title display-2 font-weight-bold">Hello, Asia!</h1>
