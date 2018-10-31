@@ -34,14 +34,14 @@
 			
 			<c:forEach var="tempArticle" items="${articles}">
 			
-				<div class="row justify-content-center no-gutters my-2">
+				<div class="row no-gutters my-2">
 				
 					<!-- create link variable to open Article -->
 					<c:url var="openArticle" value="/article/showArticle">
 						<c:param name="articleId" value="${tempArticle.id}"></c:param>
 					</c:url>
 				
-					<div class="col col-md-5 col-lg-4 px-1">
+					<div class="col-12 col-sm-12 col-md-5 col-lg-4 px-1">
 					
 						<a href="${openArticle}">
 							<img class="img-fluid rounded" alt="${tempArticle.title}: article image" src="${tempArticle.coverLink}">
@@ -49,7 +49,7 @@
 						
 					</div>
 					
-					<div class="col col-md-7 col-lg-8 px-1">
+					<div class="col-12 col-sm-12 col-md-7 col-lg-8 px-1">
 						
 						<h3>
 							<a class="text-dark" href="${openArticle}">${tempArticle.title}</a>
@@ -79,7 +79,7 @@
 						<span class="text-muted font-italic">опубликовано: <t:time timeTag="${tempArticle.publishDate}" /></span>
 						
 						<div class="trim my-2">
-							${tempArticle.body}
+							<p>${tempArticle.body}</p>
 						</div>
 						
 						<a class="badge badge-pill badge-success text-uppercase" style="font-size: small" href="${openArticle}">читать полностью</a>

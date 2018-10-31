@@ -6,12 +6,12 @@ iframe {
 	overflow: hidden;
 }
 
-figcaption {
-	text-align: center;
-	font-style: italic !important;
-	color: #6c757d !important;
-	margin-top: 0.5rem !important;
-}
+/* figcaption { */
+/* 	text-align: center; */
+/* 	font-style: italic !important; */
+/* 	color: #6c757d !important; */
+/* 	margin-top: 0.5rem !important; */
+/* } */
 
 .trim {
 	width: 100%;

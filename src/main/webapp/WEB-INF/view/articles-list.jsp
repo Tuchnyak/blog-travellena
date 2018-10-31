@@ -41,7 +41,7 @@
 						<c:param name="articleId" value="${tempArticle.id}"></c:param>
 					</c:url>
 				
-					<div class="col col-md-5 col-lg-4 px-1">
+					<div class="col-12 col-sm-12 col-md-5 col-lg-4 px-1">
 					
 						<a href="${openArticle}">
 							<img class="img-fluid rounded" alt="${tempArticle.title}: article image" src="${tempArticle.coverLink}">
@@ -49,7 +49,7 @@
 						
 					</div>
 					
-					<div class="col col-md-7 col-lg-8 px-1">
+					<div class="col-12 col-sm-12 col-md-7 col-lg-8 px-1">
 					
 						<!-- create link variable to open Article -->
 						<c:url var="openArticle" value="/article/showArticle">
