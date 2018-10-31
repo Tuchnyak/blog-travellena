@@ -15,7 +15,7 @@
 	<div class="container-fluid bg-dark text-center logo-header">
 		<div class="row">
 			<div class="card-img-overlay d-flex flex-column justify-content-center text-black-50">
-				<h1 class="hide-in-article card-title display-2 font-weight-bold">Hello, Asia!</h1>
+				<h1 class="hide-in-article card-title display-2 font-weight-bold beauty-title">Hello, Asia!</h1>
 				<p class="hide-in-article card-text font-weight-bold h3">downshifting</p>
 			</div>
 		</div>

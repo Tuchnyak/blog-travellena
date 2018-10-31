@@ -1,9 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Arsenal|Pattaya|Roboto+Condensed:400|Roboto:300');
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "*" "";
+  text-align : justify;
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.1em;
+  vertical-align: -0.2em;
+}
+
+blockquote p {
+  display: inline;
+}
+
 iframe {
 	position: relative;
 	display: block;
 	width: 100%;
 	padding: 0;
 	overflow: hidden;
+}
+
+article p {
+	text-indent: 4%;
 }
 
 /* figcaption { */
@@ -68,6 +96,11 @@ iframe {
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
 	hyphens: auto;
+}
+
+.beauty-title {
+	font-family: 'Pattaya', Arial, sans-serif;
+	letter-spacing: 0.2rem;
 }
 
 .error {

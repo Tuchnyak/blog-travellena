@@ -15,9 +15,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet">
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
+<link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel="stylesheet">
+<!-- Custom Styles -->
+<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet">
 
 <title>Travellena - Все статьи</title>
 
