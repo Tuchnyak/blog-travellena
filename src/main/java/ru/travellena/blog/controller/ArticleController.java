@@ -5,7 +5,6 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
@@ -18,7 +17,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import ru.travellena.blog.entity.Article;
 import ru.travellena.blog.service.ArticleService;
 
@@ -142,6 +140,7 @@ public class ArticleController {
 
 	/**
 	 * initBinder to process strings from the input
+	 * 
 	 * @param dataBinder
 	 */
 	@InitBinder
@@ -163,7 +162,7 @@ public class ArticleController {
 	@PostMapping("/saveArticle")
 	public String saveArticle(@Valid @ModelAttribute("article") Article theArticle, BindingResult theBindingResult,
 			@RequestParam("fromPage") String fromPage, HttpServletRequest request) {
-		
+
 		if (theBindingResult.hasErrors()) {
 			request.setAttribute("fromPage", fromPage);
 			return "article-form";
