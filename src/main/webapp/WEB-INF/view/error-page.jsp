@@ -21,24 +21,28 @@
 
 <body>
 
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col col-md-8">
+
 				<h1 class="display-1">Ошибка!</h1>
-				
+
 				<div class="my-3">
 					<h2>Запрашиваемый ресурс:</h2>
 					<h2 class="font-weight-bold">${url}</h2>
 					<h2>не найден!</h2>
 				</div>
 
-				<p>ошибка: ${exception}</p>
-				<p>текст ошибки: ${exception.message}</p>
-				
-				
+				<p>
+					<span class="font-weight-bold">ошибка:</span> ${exception}
+				</p>
+				<p>
+					<span class="font-weight-bold">текст ошибки:</span> ${exception.message}
+				</p>
+
+
 				<a class="btn btn-warning text-uppercase my-4 font-weight-bold" href="${pageContext.request.contextPath}/">На главную страницу</a>
-				
+
 			</div>
 		</div>
 	</div>
