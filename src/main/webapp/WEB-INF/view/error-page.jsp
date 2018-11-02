@@ -30,7 +30,7 @@
 				<div class="my-3">
 					<h2>Запрашиваемый ресурс:</h2>
 					<h2 class="font-weight-bold">${url}</h2>
-					<h2>нет доступа!</h2>
+					<h2>не найден!</h2>
 				</div>
 
 				<p>ошибка: ${exception}</p>

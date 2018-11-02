@@ -25,9 +25,15 @@ public class ExceptionHandlerController extends ResponseEntityExceptionHandler i
 		System.out.println("===>>> Resolving Exception");
 		System.out.println("===>>> Response: " + response.getStatus());
 
+		String url = request.getScheme() + "://" +
+	             request.getServerName() + 
+	             ("http".equals(request.getScheme()) && request.getServerPort() == 80 || "https".equals(request.getScheme()) && request.getServerPort() == 443 ? "" : ":" + request.getServerPort() ) +
+	             request.getRequestURI() +
+	            (request.getQueryString() != null ? "?" + request.getQueryString() : "");
+		
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("exception", ex);
-		mav.addObject("url", request.getRequestURL());
+		mav.addObject("url", url);
 		mav.setViewName(DEFAULT_ERROR_VIEW);
 
 		return mav;

@@ -3,6 +3,7 @@ package ru.travellena.blog.controller;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import javax.persistence.NoResultException;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -210,6 +211,10 @@ public class ArticleController {
 	public String showArticle(@RequestParam("articleId") long theId, Model theModel) {
 
 		Article theArticle = service.getArticle(theId);
+		
+		if (theArticle == null) {
+			throw new NoResultException("===>>> The article is not found!");
+		}
 
 		theModel.addAttribute("article", theArticle);
 
