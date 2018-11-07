@@ -32,8 +32,13 @@
 	
 		<div class="container-fluid">
 			
-			<h1 class="display-4 my-3">Все статьи:</h1>
-			<hr class="my-4">
+			<div class="row no-gutters">
+				<div class="col">
+					<h1 class="display-4 my-2">Все статьи:</h1>
+					<span class="text-muted font-italic">всего статей: ${amountOfArticles}</span>
+					<hr class="my-3">
+				</div>
+			</div>
 			
 			<c:forEach var="tempArticle" items="${articles}">
 			

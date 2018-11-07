@@ -57,7 +57,10 @@ public class ArticleController {
 	@GetMapping("/showList")
 	public String showList(Model theModel) {
 
-		theModel.addAttribute("articles", service.getAllArticles());
+		List<Article> list = service.getAllArticles();
+		
+		theModel.addAttribute("amountOfArticles", list.size());
+		theModel.addAttribute("articles", list);
 
 		return "articles-list";
 	}
@@ -69,8 +72,11 @@ public class ArticleController {
 	 */
 	@GetMapping("/showTableOfContext")
 	public String showTableOfContext(Model theModel) {
+		
+		List<Article> list = service.getAllArticles();
 
-		theModel.addAttribute("articles", service.getAllArticles());
+		theModel.addAttribute("amountOfArticles", list.size());
+		theModel.addAttribute("articles", list);
 
 		return "articles-table-of-context";
 	}

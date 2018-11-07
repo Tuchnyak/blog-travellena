@@ -14,7 +14,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta name="description" content="Содержание блога о самостоятельных путешествиях по юго-восточной Азии и дауншифтинге."> 
+<meta name="description" content="Содержание блога о самостоятельных путешествиях по юго-восточной Азии и дауншифтинге.">
 
 <!-- Bootstrap CSS -->
 <link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel="stylesheet">
@@ -30,8 +30,13 @@
 	
 		<div class="container-fluid">
 			
-			<h1 class="display-4 my-3">Содержание:</h1>
-			<hr class="my-4">
+			<div class="row no-gutters">
+				<div class="col text-center">
+					<h1 class="display-4 my-2">Содержание:</h1>				
+					<span class="text-muted font-italic">всего статей: ${amountOfArticles}</span>
+					<hr class="my-3">
+				</div>
+			</div>
 			
 			<c:forEach var="tempArticle" items="${articles}">
 			
