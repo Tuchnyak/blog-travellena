@@ -38,9 +38,15 @@
 				</div>
 			</div>
 			
+			<!-- Set variable to count article rows -->
+			<c:set var="rowCount" value="${0}" />
+			
 			<c:forEach var="tempArticle" items="${articles}">
 			
 				<div class="row justify-content-center no-gutters my-2">
+				
+					<!-- rowCount++ -->
+					<c:set var="rowCount" value="${rowCount + 1}" />
 					
 					<div class="col px-1 text-center">
 					
@@ -50,7 +56,7 @@
 						</c:url>
 						
 						<h3>
-							<a class="text-dark" href="${openArticle}">${tempArticle.title}</a>
+							<a class="text-dark" href="${openArticle}">${rowCount}. ${tempArticle.title}</a>
 						</h3>
 						
 						<!--  Security content -->
