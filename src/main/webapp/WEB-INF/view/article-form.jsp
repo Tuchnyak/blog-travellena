@@ -107,6 +107,8 @@
 			});
 </script>
 
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/favicon.ico" />
+
 <title>Travellena - Article Form</title>
 
 <style type="text/css">

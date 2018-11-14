@@ -17,6 +17,8 @@
 <!-- Custom Styles -->
 <link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet">
 
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/favicon.ico" />
+
 <title>Travellena - Login</title>
 
 <style type="text/css">
