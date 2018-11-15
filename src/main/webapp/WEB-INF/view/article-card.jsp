@@ -15,7 +15,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta name="description" content="${article.title}. Статья о самостоятельных путешествиях по юго-восточной Азии и дауншифтинге."> 
+<meta name="title" content="${article.title}" />
+<meta name="description" content="${article.title}. Статья о самостоятельных путешествиях по юго-восточной Азии и дауншифтинге.">
+<link rel="image_src" href="${article.coverLink}" />
+
+<meta property="og:title" content="${article.title}" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="${article.coverLink}" />
+<meta property="vk:image" content="${article.coverLink}" />
 
 <!-- Bootstrap CSS -->
 <link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel="stylesheet">
@@ -40,6 +47,8 @@
 	color: rgba(0, 0, 0, 0.0);
 }
 </style>
+
+<script src="https://yastatic.net/share2/share.js" async="async"></script>
 
 </head>
 
@@ -76,9 +85,16 @@
 							</security:authorize>
 							
 							<span class="text-muted font-italic">опубликовано: <t:time timeTag="${article.publishDate}" /></span>														
-						</div>						
+						</div>
 						
 						<p class="text-justify my-4">${article.body}</p>
+						
+						<div class="text-center">
+							<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+							<script src="//yastatic.net/share2/share.js"></script>
+							<div class="ya-share2" data-services="vkontakte,facebook,telegram,collections,whatsapp,pinterest"
+							 data-image="${article.coverLink}" data-description="Блог о самостоятельных путешествияхх по Азии"></div>
+						</div>
 					
 					</article>									
 				

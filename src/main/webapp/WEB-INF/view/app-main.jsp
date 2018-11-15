@@ -15,7 +15,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta name="description" content="Блог о самостоятельных путешествиях по юго-восточной Азии и дауншифтинге."> 
+<meta name="description" content="Блог о самостоятельных путешествиях по юго-восточной Азии и дауншифтинге.">
+
+<meta property="og:title" content="Travellena" />
+<meta property="og:type" content="blog" />
+<meta property="og:image" content="http://176.57.215.249/resources/img/header-img.jpeg" />
+<meta property="vk:image" content="http://176.57.215.249/resources/img/header-img.jpeg" />
 
 <!-- Bootstrap CSS -->
 <link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel="stylesheet">
@@ -25,6 +30,8 @@
 <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/favicon.ico" />
 
 <title>Travellena</title>
+
+<script src="https://yastatic.net/share2/share.js" async="async"></script>
 
 </head>
 
@@ -100,6 +107,14 @@
 				<div class="col">
 					<a class="btn btn-outline-success btn-lg btn-block text-uppercase" href="${pageContext.request.contextPath}/article/showList">открыть все статьи...</a>
 				</div>
+			</div>
+			
+			<div class="text-center my-3">
+				<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+				<script src="//yastatic.net/share2/share.js"></script>
+				Поделиться ссылкой на блог:
+				<div class="ya-share2" data-services="vkontakte,facebook,telegram,collections,whatsapp,pinterest"
+				 data-image="http://176.57.215.249/resources/img/header-img.jpeg" data-description="Блог о самостоятельных путешествияхх по Азии"></div>
 			</div>
 		
 		</div>

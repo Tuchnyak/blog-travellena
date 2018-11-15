@@ -16,6 +16,11 @@
 
 <meta name="description" content="Содержание блога о самостоятельных путешествиях по юго-восточной Азии и дауншифтинге.">
 
+<meta property="og:title" content="Travellena" />
+<meta property="og:type" content="blog" />
+<meta property="og:image" content="http://176.57.215.249/resources/img/header-img.jpeg" />
+<meta property="vk:image" content="http://176.57.215.249/resources/img/header-img.jpeg" />
+
 <!-- Bootstrap CSS -->
 <link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel="stylesheet">
 <!-- Custom Styles -->
@@ -23,7 +28,10 @@
 
 <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/favicon.ico" />
 
-<title>Travellena - Table of Context</title>
+<title>Travellena - Содержание</title>
+
+<script src="https://yastatic.net/share2/share.js" async="async"></script>
+
 </head>
 
 <t:page-template>
@@ -92,6 +100,14 @@
 				<hr>
 			
 			</c:forEach>
+			
+			<div class="text-center my-3">
+				<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+				<script src="//yastatic.net/share2/share.js"></script>
+				Поделиться ссылкой на блог:
+				<div class="ya-share2" data-services="vkontakte,facebook,telegram,collections,whatsapp,pinterest"
+				 data-image="http://176.57.215.249/resources/img/header-img.jpeg" data-description="Блог о самостоятельных путешествияхх по Азии"></div>
+			</div>
 		
 		</div>
 	
