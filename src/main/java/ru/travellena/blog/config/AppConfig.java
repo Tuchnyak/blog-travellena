@@ -147,6 +147,7 @@ public class AppConfig implements WebMvcConfigurer {
 
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 		registry.addResourceHandler("/favicon.ico").addResourceLocations("/favicon.ico");
+		registry.addResourceHandler("/robots.txt").addResourceLocations("/robots.txt");
 
 	}
 

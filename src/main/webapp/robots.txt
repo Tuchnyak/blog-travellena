@@ -1,0 +1,17 @@
+User-agent: *
+#
+Disallow: /article/showDrafts
+Disallow: /article/showFormForAdd
+Disallow: /article/showFormForUpdate
+Disallow: /article/saveArticle
+Disallow: /article/delete
+Disallow: /article/searchArticle
+#
+Disallow: /showLoginBlogPage
+#
+Disallow: /resources
+#
+Allow: /resources/css/*.css
+Allow: /resources/js/*.js
+#
+Crawl-delay: 1
