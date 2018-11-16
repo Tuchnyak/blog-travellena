@@ -8,7 +8,7 @@
 
 	<div class="container-fluid font-weight-bold">
 		
-		<a class="navbar-brand beauty-title" style="font-size: 1.5rem;" href="${pageContext.request.contextPath}/">Travellena</a>
+		<a class="navbar-brand beauty-title font-weight-normal" style="font-size: 1.5rem;" href="${pageContext.request.contextPath}/">travellena</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			меню <span class="navbar-toggler-icon"></span>
