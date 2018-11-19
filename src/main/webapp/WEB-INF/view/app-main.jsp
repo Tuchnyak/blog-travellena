@@ -22,6 +22,10 @@
 <meta property="og:image" content="http://176.57.215.249/resources/img/header-img.jpeg" />
 <meta property="vk:image" content="http://176.57.215.249/resources/img/header-img.jpeg" />
 
+<!-- Google & Yandex verification -->
+<meta name="google-site-verification" content="ymcE6gTPS-MCvXbm7FEWM5Y15sGEsi4d32pg17S2QbY" />
+<meta name="yandex-verification" content="a4373d3cb64fe616" />
+
 <!-- Bootstrap CSS -->
 <link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel="stylesheet">
 <!-- Custom Styles -->

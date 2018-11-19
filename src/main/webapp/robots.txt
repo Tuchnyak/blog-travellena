@@ -11,6 +11,7 @@ Disallow: /showLoginBlogPage
 #
 Disallow: /resources
 #
+Allow: /article/main
 Allow: /resources/css/*.css
 Allow: /resources/js/*.js
 #
