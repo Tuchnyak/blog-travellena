@@ -246,20 +246,4 @@ public class ArticleController {
 		return "articles-list";
 	}
 
-	/**
-	 * Deprecated method which gives last part of a http request from current page
-	 * For example: "/articles/main"
-	 * 
-	 * @param request - HttpServletRequest object
-	 * @return String path
-	 */
-	@SuppressWarnings("unused")
-	@Deprecated
-	private String getRequsetPath(HttpServletRequest request) {
-		String context = request.getContextPath();
-		String reqUri = request.getRequestURI();
-		String path = reqUri.replaceAll(context, "");
-		return path;
-	}
-
 }
